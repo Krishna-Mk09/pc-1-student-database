@@ -18,6 +18,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StudentRepository {
+    /**
+     * It creates a statement, executes the query, and then iterates over the result set to create a list of students
+     *
+     * @param connection This is the connection object that we created in the previous step.
+     * @return A list of students.
+     */
     public List<Student> getAllStudentDetails(Connection connection) throws SQLException {
         String readQuery = "SELECT * FROM `school`.`student`;";
         List<Student> studentList = new ArrayList<>();

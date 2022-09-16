@@ -2,7 +2,6 @@
  * Author Name : M.Krishna.
  * Date: 16-09-2022
  * Created With: IntelliJ IDEA Community Edition
- *
  */
 package com.niit.jdp;
 
@@ -13,6 +12,11 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 public class StudentImpl {
+    /**
+     * It connects to the database, calls the methods
+     * gets all the student details and prints them.
+     * it also handles the exceptions if any
+     */
     public static void main(String[] args) {
         DatabaseService databaseService = new DatabaseService();
         try {
