@@ -19,7 +19,7 @@ import java.util.List;
 
 public class StudentRepository {
     public List<Student> getAllStudentDetails(Connection connection) throws SQLException {
-        String readQuery = "SELECT * FROM `sales_commission`.`sales_person`;";
+        String readQuery = "SELECT * FROM `school`.`student`;";
         List<Student> studentList = new ArrayList<>();
         Statement statement = connection.createStatement();
         ResultSet studentResultSet = statement.executeQuery(readQuery);

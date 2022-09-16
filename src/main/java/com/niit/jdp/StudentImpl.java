@@ -4,34 +4,27 @@
  * Created With: IntelliJ IDEA Community Edition
  *
  */
-
-
 package com.niit.jdp;
 
-import com.niit.jdp.model.Student;
 import com.niit.jdp.repository.StudentRepository;
 import com.niit.jdp.service.DatabaseService;
 
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.List;
 
 public class StudentImpl {
     public static void main(String[] args) {
         DatabaseService databaseService = new DatabaseService();
-        StudentRepository studentRepository = new StudentRepository();
-        Connection connection = databaseService.getConnection();
         try {
-            List<Student> allStudent = studentRepository.getAllStudentDetails(connection);
-            for (Student student : allStudent) {
-                System.out.println(student);
-            }
-        } catch (SQLException exception) {
-            System.out.println("Not connected to the database");
+            databaseService.connect();
+            StudentRepository studentRepository = new StudentRepository();
+            Connection connection = databaseService.getConnection();
+            studentRepository.getAllStudentDetails(connection).forEach(System.out::println);
+        } catch (ClassNotFoundException | SQLException exception) {
+            System.err.println("Error connecting to database ");
             exception.printStackTrace();
         } finally {
             databaseService.printConnectionStatus();
-
         }
     }
 }
