@@ -20,14 +20,17 @@ import java.util.List;
 public class StudentRepository {
     public List<Student> getAllStudentDetails(Connection connection) throws SQLException {
         String readQuery = "SELECT * FROM `sales_commission`.`sales_person`;";
-        List<Student> salespersonList = new ArrayList<>();
+        List<Student> studentList = new ArrayList<>();
         Statement statement = connection.createStatement();
         ResultSet studentResultSet = statement.executeQuery(readQuery);
         while (studentResultSet.next()) {
             String name = studentResultSet.getString("name");
             int rollNumber = studentResultSet.getInt("roll_number");
             String grades = studentResultSet.getString("grades");
+            Student student = new Student(name, rollNumber, grades);
+
         }
-        return salespersonList;
+
+        return studentList;
     }
 }
