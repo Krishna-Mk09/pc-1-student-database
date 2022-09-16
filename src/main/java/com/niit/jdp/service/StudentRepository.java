@@ -28,9 +28,8 @@ public class StudentRepository {
             int rollNumber = studentResultSet.getInt("roll_number");
             String grades = studentResultSet.getString("grades");
             Student student = new Student(name, rollNumber, grades);
-
+            studentList.add(student);
         }
-
         return studentList;
     }
 }
