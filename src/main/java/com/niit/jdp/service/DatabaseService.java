@@ -13,5 +13,6 @@ public class DatabaseService {
     private static final String USERNAME = "root";
     private static final String PASSWORD = "Krishna81433*";
 
-
+    public DatabaseService() {
+    }
 }
