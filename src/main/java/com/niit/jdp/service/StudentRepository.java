@@ -8,15 +8,16 @@
 
 package com.niit.jdp.service;
 
+import com.niit.jdp.model.Student;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.List;
+
 public class StudentRepository {
-    public void getAllStudentDetails() {
-        //Load the Drivers
-        // Get the connection from database
+    public List<Student> getAllStudentDetails(Connection connection) throws SQLException {
+        String readQuery = "SELECT * FROM `sales_commission`.`sales_person`;";
 
-        //Create statement object
-
-        //execute the query
-
-        //display the ResultSet Data
+        return null;
     }
 }
