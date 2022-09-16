@@ -11,6 +11,7 @@ package com.niit.jdp.service;
 import com.niit.jdp.model.Student;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
@@ -21,6 +22,7 @@ public class StudentRepository {
         String readQuery = "SELECT * FROM `sales_commission`.`sales_person`;";
         List<Student> salespersonList = new ArrayList<>();
         Statement statement = connection.createStatement();
+        ResultSet studentResultSet = statement.executeQuery(readQuery);
         return null;
     }
 }
