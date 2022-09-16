@@ -1,10 +1,9 @@
-package com.jap;
+package com.niit.jdp;
 
-public class StudentDemo
-{
+public class StudentDemo {
 
-    public void getAllStudentDetails(){
-      //Load the Drivers
+    public void getAllStudentDetails() {
+        //Load the Drivers
         // Get the connection from database
 
         //Create statement object
