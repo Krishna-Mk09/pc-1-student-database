@@ -6,7 +6,7 @@
  */
 
 
-package com.niit.jdp.service;
+package com.niit.jdp.repository;
 
 import com.niit.jdp.model.Student;
 
