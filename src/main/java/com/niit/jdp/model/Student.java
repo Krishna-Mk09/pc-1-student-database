@@ -9,4 +9,7 @@
 package com.niit.jdp.model;
 
 public class Student {
+    private String name;
+    private int rollNumber;
+    private String grades;
 }
