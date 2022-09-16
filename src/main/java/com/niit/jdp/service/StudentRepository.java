@@ -23,6 +23,11 @@ public class StudentRepository {
         List<Student> salespersonList = new ArrayList<>();
         Statement statement = connection.createStatement();
         ResultSet studentResultSet = statement.executeQuery(readQuery);
-        return null;
+        while (studentResultSet.next()) {
+            String name = studentResultSet.getString("name");
+            int rollNumber = studentResultSet.getInt("roll_number");
+            String grades = studentResultSet.getString("grades");
+        }
+        return salespersonList;
     }
 }
