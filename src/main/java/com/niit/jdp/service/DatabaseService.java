@@ -16,6 +16,10 @@ public class DatabaseService {
     private static final String PASSWORD = "Krishna81433*";
     private final Connection connection;
 
+    public Connection getConnection() {
+        return connection;
+    }
+
     public DatabaseService() {
         this.connection = null;
     }
