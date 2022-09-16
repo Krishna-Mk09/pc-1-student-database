@@ -15,10 +15,10 @@ public class DatabaseService {
     private static final String USERNAME = "root";
     private static final String PASSWORD = "Krishna81433*";
 
-    private Connection connection;
-
+    private final Connection connection;
 
     public DatabaseService() {
+        this.connection = null;
     }
 
 }
