@@ -67,4 +67,13 @@ public class Student {
         result = 31 * result + (grades != null ? grades.hashCode() : 0);
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", rollNumber=" + rollNumber +
+                ", grades='" + grades + '\'' +
+                '}';
+    }
 }
